@@ -7,7 +7,9 @@ import os
 import pandas as pd
 from typing import List, Dict, Any
 
-CAMINHO_ALIMENTOS = os.path.join("dados", "banco_alimentos.xlsx")
+# Descobre dinamicamente a pasta raiz do projeto e aponta para o Excel lá dentro
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CAMINHO_ALIMENTOS = os.path.join(BASE_DIR, "banco_alimentos.xlsx")
 
 def converter_para_kcal_g(valor: float, unidade: str) -> float:
     """
