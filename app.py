@@ -2,7 +2,17 @@
 Interface Principal do Sistema Nutricional Veterinário em Streamlit.
 Módulo 3: Versão Estabilizada sem Loops de Recarregamento.
 """
+import sys
+import os
 
+# Força o Python a incluir a pasta atual no caminho de busca de módulos
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+# Daqui para baixo continua o seu código normal...
+import streamlit as str_app
+from datetime import datetime
+from engine.calculos import calcular_peso_meta, determinar_etapas, calcular_nem, obter_limites_fator
+# ... resto do código
 import streamlit as str_app
 from datetime import datetime
 from engine.calculos import calcular_peso_meta, determinar_etapas, calcular_nem, obter_limites_fator
